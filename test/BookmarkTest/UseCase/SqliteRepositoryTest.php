@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace BookmarkTest\UseCase;
 
-use Bookmark\UseCase\InmemRepository;
+use Bookmark\UseCase\SqliteRepository;
 use PHPUnit\Framework\TestCase;
 use Bookmark\UseCase\Service;
 use Bookmark\Entity\Bookmark;
 
-class ServiceTest extends TestCase
+class SqliteRepositoryTest extends TestCase
 {
+    private $conn;
     private $repo;
-    private $service;
 
     public function setup()
     {
-        $this->repo = new InmemRepository;
-        $this->service = new Service($this->repo);
+        $this->conn = $conn = new \PDO('sqlite::memory:');
+        $this->repo = new SqliteRepository($this->conn);
     }
-
+    
     public function testStore()
     {
         $b = new Bookmark;
@@ -29,7 +29,7 @@ class ServiceTest extends TestCase
         $b->tags = ["golang", "php", "linux", "mac"];
         $b->favorite = true;
 
-        $id = $this->service->store($b);
+        $id = $this->repo->store($b);
         $this->assertEquals(1, $id);
     }
 
@@ -49,16 +49,14 @@ class ServiceTest extends TestCase
         $b2->tags = ["search", "engine"];
         $b2->favorite = false;
 
-        $id = $this->service->store($b);
-        $this->assertEquals(1, $id);
-        $id2 = $this->service->store($b2);
-        $this->assertEquals(2, $id2);
-
-        $s1 = $this->service->search('Elton Minetto');
-        $this->assertEquals(1, $s1->id);
-        $all = $this->service->findAll();
-        $this->assertEquals(1, $all[1]->id);
-        $this->assertEquals(2, $all[2]->id);
+        $id = $this->repo->store($b);
+        $id2 = $this->repo->store($b2);
+        
+        $s1 = $this->repo->search('Elton Minetto');
+        $this->assertEquals(1, $s1[0]->id);
+        $all = $this->repo->findAll();
+        $this->assertEquals(1, $all[0]->id);
+        $this->assertEquals(2, $all[1]->id);
     }
 
     public function testDelete()
@@ -77,13 +75,13 @@ class ServiceTest extends TestCase
         $b2->tags = ["search", "engine"];
         $b2->favorite = false;
 
-        $id = $this->service->store($b);
-        $id2 = $this->service->store($b2);
+        $id = $this->repo->store($b);
+        $id2 = $this->repo->store($b2);
 
-        $deleted = $this->service->delete($id);
-        $this->assertEquals(false, $deleted);
+        $deleted = $this->repo->delete($id);
+        $this->assertEquals(true, $deleted);
 
-        $deleted = $this->service->delete($id2);
+        $deleted = $this->repo->delete($id2);
         $this->assertEquals(true, $deleted);
     }
 }
