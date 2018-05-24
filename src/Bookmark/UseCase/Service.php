@@ -29,6 +29,7 @@ class Service implements UseCaseInterface, RepositoryInterface
 
     public function store(Bookmark $bookmark): int
     {
+        $bookmark->createdAt = new \Datetime();
         return $this->repository->store($bookmark);
     }
 

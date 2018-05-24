@@ -17,7 +17,8 @@ class SqliteRepository implements RepositoryInterface
                     description TEXT, 
                     link TEXT,
                     tags TEXT,
-                    favorite integer)");
+                    favorite integer,
+                    created_at integer)");
     }
 
     public function find(int $id) : Bookmark
@@ -63,6 +64,7 @@ class SqliteRepository implements RepositoryInterface
             $b->link = $m['link'];
             $b->tags = explode(",", $m['tags']);
             $b->favorite = $m['favorite'];
+            $b->createdAt = $m['created_at'];
             $all[] = $b;
         }
         return $all;
@@ -70,13 +72,15 @@ class SqliteRepository implements RepositoryInterface
 
     public function store(Bookmark $bookmark): int
     {
-        $stmt = $this->conn->prepare('insert into bookmarks (name, description, link, tags, favorite) values (:name, :description, :link, :tags, :favorite)');
+        $bookmark->createdAt = $bookmark->createdAt->getTimeStamp();
+        $stmt = $this->conn->prepare('insert into bookmarks (name, description, link, tags, favorite, created_at) values (:name, :description, :link, :tags, :favorite, :created_at)');
         $stmt->bindParam(':name',$bookmark->name);
         $stmt->bindParam(':description', $bookmark->description);
         $stmt->bindParam(':link', $bookmark->link);
         $tags = implode(",", $bookmark->tags);
         $stmt->bindParam(':tags', $tags);
         $stmt->bindParam(':favorite', $bookmark->favorite);
+        $stmt->bindParam(':created_at', $bookmark->createdAt);
         $stmt->execute();
         return $this->conn->lastInsertId();
     }

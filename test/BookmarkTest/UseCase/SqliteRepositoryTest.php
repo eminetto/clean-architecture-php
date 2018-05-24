@@ -16,7 +16,7 @@ class SqliteRepositoryTest extends TestCase
 
     public function setup()
     {
-        $this->conn = $conn = new \PDO('sqlite::memory:');
+        $this->conn = new \PDO('sqlite::memory:');
         $this->repo = new SqliteRepository($this->conn);
     }
     
