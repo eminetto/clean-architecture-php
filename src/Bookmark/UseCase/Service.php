@@ -3,7 +3,7 @@ namespace Bookmark\UseCase;
 
 use Bookmark\Entity\Bookmark;
 
-class Service implements UseCaseInterface, RepositoryInterface
+class Service implements UseCaseInterface
 {
     private $repository;
 

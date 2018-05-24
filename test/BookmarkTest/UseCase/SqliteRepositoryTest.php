@@ -27,6 +27,7 @@ class SqliteRepositoryTest extends TestCase
         $b->description = 'Minettos page';
         $b->link = 'http://www.eltonminetto.net';
         $b->tags = ["golang", "php", "linux", "mac"];
+        $b->createdAt = new \Datetime();
         $b->favorite = true;
 
         $id = $this->repo->store($b);
@@ -41,6 +42,7 @@ class SqliteRepositoryTest extends TestCase
         $b->link = 'http://www.eltonminetto.net';
         $b->tags = ["golang", "php", "linux", "mac"];
         $b->favorite = true;
+        $b->createdAt = new \Datetime();
 
         $b2 = new Bookmark;
         $b2->name = 'Google';
@@ -48,6 +50,7 @@ class SqliteRepositoryTest extends TestCase
         $b2->link = 'http://google.com';
         $b2->tags = ["search", "engine"];
         $b2->favorite = false;
+        $b2->createdAt = new \Datetime();
 
         $id = $this->repo->store($b);
         $id2 = $this->repo->store($b2);
@@ -66,6 +69,7 @@ class SqliteRepositoryTest extends TestCase
         $b->description = 'Minettos page';
         $b->link = 'http://www.eltonminetto.net';
         $b->tags = ["golang", "php", "linux", "mac"];
+        $b->createdAt = new \Datetime();
         $b->favorite = true;
 
         $b2 = new Bookmark;
@@ -73,6 +77,7 @@ class SqliteRepositoryTest extends TestCase
         $b2->description = 'Google';
         $b2->link = 'http://google.com';
         $b2->tags = ["search", "engine"];
+        $b2->createdAt = new \Datetime();
         $b2->favorite = false;
 
         $id = $this->repo->store($b);
