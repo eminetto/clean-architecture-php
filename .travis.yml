@@ -2,4 +2,4 @@ language: php
 php:
   - '7.1'
 install: composer install
-script: ./vendor/bin/phpunit
+script: phpunit --configuration phpunit.xml --coverage-text
