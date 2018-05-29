@@ -1,4 +1,4 @@
 language: php
 php:
   - '7.1'
-script: phpunit --configuration phpunit.xml --coverage-text
+script: ./vendor/bin/phpunit --configuration phpunit.xml --coverage-text
