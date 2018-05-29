@@ -14,7 +14,6 @@ class InmemRepository implements RepositoryInterface
         return $this->bookmarks[$id];
     }
 
-    //@todo implement exception
     public function search(string $query)
     {
         foreach ($this->bookmarks as $key => $value) {
