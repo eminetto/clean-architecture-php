@@ -21,9 +21,9 @@ return [
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories'  => [
             // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
-            Bookmark\Handler\IndexHandler::class => Bookmark\Handler\HandlerFactory::class,
-            Bookmark\Handler\PostHandler::class => Bookmark\Handler\HandlerFactory::class,
-            Bookmark\UseCase\SqliteRepository::class => Bookmark\UseCase\SqliteRepositoryFactory::class, 
+            Bookmark\Controller\IndexHandler::class => Bookmark\Controller\HandlerFactory::class,
+            Bookmark\Controller\PostHandler::class => Bookmark\Controller\HandlerFactory::class,
+            Bookmark\Driver\SqliteRepository::class => Bookmark\Driver\SqliteRepositoryFactory::class, 
         ],
     ],
 ];

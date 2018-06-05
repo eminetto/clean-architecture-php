@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Bookmark\Handler;
+namespace Bookmark\Controller;
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Bookmark\UseCase\SqliteRepository;
+use Bookmark\Driver\SqliteRepository;
 use Bookmark\UseCase\Service;
 
 class HandlerFactory

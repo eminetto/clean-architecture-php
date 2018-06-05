@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 $container = require 'config/container.php';
-$repo = $container->get(Bookmark\UseCase\SqliteRepository::class);
+$repo = $container->get(Bookmark\Driver\SqliteRepository::class);
 $service = new Bookmark\UseCase\Service($repo);
 $result = $service->search($argv[1]);
 foreach ($result as $key => $value) {

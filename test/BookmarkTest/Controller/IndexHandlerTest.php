@@ -2,14 +2,16 @@
 
 declare(strict_types=1);
 
-namespace BookmarkTest\Handler;
+namespace BookmarkTest\Controller;
 
-use Bookmark\Handler\IndexHandler;
+use Bookmark\Controller\IndexHandler;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
 use Bookmark\UseCase\UseCaseInterface;
+use Bookmark\Driver\SqliteRepository;
+use Bookmark\Driver\RepositoryInterface;
 
 class IndexHandlerTest extends TestCase
 {

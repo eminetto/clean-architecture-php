@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookmark\UseCase;
+namespace Bookmark\Driver;
 
 use Bookmark\Entity\Bookmark;
 

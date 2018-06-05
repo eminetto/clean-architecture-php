@@ -2,6 +2,7 @@
 namespace Bookmark\UseCase;
 
 use Bookmark\Entity\Bookmark;
+use Bookmark\Driver\RepositoryInterface;
 
 class Service implements UseCaseInterface
 {
@@ -10,11 +11,6 @@ class Service implements UseCaseInterface
     public function __construct(RepositoryInterface $repository)
     {
         $this->repository = $repository;
-    }
-
-    public function find(int $id) : Bookmark
-    {
-        return $this->repository->find($id);
     }
 
     public function search(string $query)
@@ -35,7 +31,7 @@ class Service implements UseCaseInterface
 
     public function delete(int $id) : bool
     {
-        $b = $this->find($id);
+        $b = $this->repository->find($id);
         if ($b->favorite) {
             return false;
         }

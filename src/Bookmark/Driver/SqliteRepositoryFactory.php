@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Bookmark\UseCase;
+namespace Bookmark\Driver;
 
 use Psr\Container\ContainerInterface;
-use Bookmark\UseCase\RepositoryInterface;
+use Bookmark\Driver\RepositoryInterface;
 
 class SqliteRepositoryFactory
 {

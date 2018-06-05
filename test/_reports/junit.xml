@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="App\\Tests" tests="11" assertions="20" errors="0" failures="1" skipped="0" time="0.308685">
-    <testsuite name="AppTest\Handler\PingHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/AppTest/Handler/PingHandlerTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.107041">
-      <testcase name="testResponse" class="AppTest\Handler\PingHandlerTest" classname="AppTest.Handler.PingHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/AppTest/Handler/PingHandlerTest.php" line="14" assertions="2" time="0.107041"/>
+  <testsuite name="App\\Tests" tests="11" assertions="20" errors="0" failures="0" skipped="0" time="0.294591">
+    <testsuite name="AppTest\Handler\PingHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/AppTest/Handler/PingHandlerTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.115876">
+      <testcase name="testResponse" class="AppTest\Handler\PingHandlerTest" classname="AppTest.Handler.PingHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/AppTest/Handler/PingHandlerTest.php" line="14" assertions="2" time="0.115876"/>
     </testsuite>
-    <testsuite name="BookmarkTest\Handler\HandlerFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/HandlerFactoryTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.026038">
-      <testcase name="testFactory" class="BookmarkTest\Handler\HandlerFactoryTest" classname="BookmarkTest.Handler.HandlerFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/HandlerFactoryTest.php" line="16" assertions="1" time="0.026038"/>
+    <testsuite name="BookmarkTest\Controller\HandlerFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/HandlerFactoryTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.025215">
+      <testcase name="testFactory" class="BookmarkTest\Controller\HandlerFactoryTest" classname="BookmarkTest.Controller.HandlerFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/HandlerFactoryTest.php" line="16" assertions="1" time="0.025215"/>
     </testsuite>
-    <testsuite name="BookmarkTest\Handler\IndexHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/IndexHandlerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.057816">
-      <testcase name="testReturnsJsonResponse" class="BookmarkTest\Handler\IndexHandlerTest" classname="BookmarkTest.Handler.IndexHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/IndexHandlerTest.php" line="16" assertions="1" time="0.057816"/>
+    <testsuite name="BookmarkTest\Controller\IndexHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/IndexHandlerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.058444">
+      <testcase name="testReturnsJsonResponse" class="BookmarkTest\Controller\IndexHandlerTest" classname="BookmarkTest.Controller.IndexHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/IndexHandlerTest.php" line="18" assertions="1" time="0.058444"/>
     </testsuite>
-    <testsuite name="BookmarkTest\Handler\PostHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/PostHandlerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.077775">
-      <testcase name="testReturnsJsonResponse" class="BookmarkTest\Handler\PostHandlerTest" classname="BookmarkTest.Handler.PostHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Handler/PostHandlerTest.php" line="17" assertions="1" time="0.077775"/>
+    <testsuite name="BookmarkTest\Controller\PostHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/PostHandlerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.064473">
+      <testcase name="testReturnsJsonResponse" class="BookmarkTest\Controller\PostHandlerTest" classname="BookmarkTest.Controller.PostHandlerTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Controller/PostHandlerTest.php" line="19" assertions="1" time="0.064473"/>
     </testsuite>
-    <testsuite name="BookmarkTest\UseCase\ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" tests="3" assertions="8" errors="0" failures="1" skipped="0" time="0.008640">
-      <testcase name="testStore" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="23" assertions="1" time="0.002443"/>
-      <testcase name="testSearchAndFindAll" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="36" assertions="5" time="0.001521"/>
-      <testcase name="testDelete" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="64" assertions="2" time="0.004676">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">BookmarkTest\UseCase\ServiceTest::testDelete
-Failed asserting that true matches expected false.
-
-/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php:87
-</failure>
-      </testcase>
+    <testsuite name="BookmarkTest\Driver\SqliteRepositoryFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryFactoryTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.015818">
+      <testcase name="testFactory" class="BookmarkTest\Driver\SqliteRepositoryFactoryTest" classname="BookmarkTest.Driver.SqliteRepositoryFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryFactoryTest.php" line="15" assertions="1" time="0.015818"/>
     </testsuite>
-    <testsuite name="BookmarkTest\Handler\SqliteRepositoryFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryFactoryTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.024548">
-      <testcase name="testFactory" class="BookmarkTest\Handler\SqliteRepositoryFactoryTest" classname="BookmarkTest.Handler.SqliteRepositoryFactoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryFactoryTest.php" line="15" assertions="1" time="0.024548"/>
+    <testsuite name="BookmarkTest\Driver\SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.010287">
+      <testcase name="testStore" class="BookmarkTest\Driver\SqliteRepositoryTest" classname="BookmarkTest.Driver.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryTest.php" line="23" assertions="1" time="0.003371"/>
+      <testcase name="testSearchAndFindAll" class="BookmarkTest\Driver\SqliteRepositoryTest" classname="BookmarkTest.Driver.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryTest.php" line="37" assertions="3" time="0.004945"/>
+      <testcase name="testDelete" class="BookmarkTest\Driver\SqliteRepositoryTest" classname="BookmarkTest.Driver.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/Driver/SqliteRepositoryTest.php" line="65" assertions="2" time="0.001971"/>
     </testsuite>
-    <testsuite name="BookmarkTest\UseCase\SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.006827">
-      <testcase name="testStore" class="BookmarkTest\UseCase\SqliteRepositoryTest" classname="BookmarkTest.UseCase.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryTest.php" line="23" assertions="1" time="0.001899"/>
-      <testcase name="testSearchAndFindAll" class="BookmarkTest\UseCase\SqliteRepositoryTest" classname="BookmarkTest.UseCase.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryTest.php" line="37" assertions="3" time="0.003187"/>
-      <testcase name="testDelete" class="BookmarkTest\UseCase\SqliteRepositoryTest" classname="BookmarkTest.UseCase.SqliteRepositoryTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/SqliteRepositoryTest.php" line="65" assertions="2" time="0.001741"/>
+    <testsuite name="BookmarkTest\UseCase\ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" tests="3" assertions="8" errors="0" failures="0" skipped="0" time="0.004478">
+      <testcase name="testStore" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="23" assertions="1" time="0.001656"/>
+      <testcase name="testSearchAndFindAll" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="36" assertions="5" time="0.001518"/>
+      <testcase name="testDelete" class="BookmarkTest\UseCase\ServiceTest" classname="BookmarkTest.UseCase.ServiceTest" file="/Users/eminetto/Documents/Projects/clean-architecture-php/test/BookmarkTest/UseCase/ServiceTest.php" line="64" assertions="2" time="0.001304"/>
     </testsuite>
   </testsuite>
 </testsuites>

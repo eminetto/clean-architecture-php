@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-namespace BookmarkTest\Handler;
+namespace BookmarkTest\Controller;
 
-use Bookmark\Handler\PostHandler;
+use Bookmark\Controller\PostHandler;
 use PHPUnit\Framework\TestCase;
 use Bookmark\Entity\Bookmark;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
 use Bookmark\UseCase\UseCaseInterface;
+use Bookmark\Driver\SqliteRepository;
+use Bookmark\Driver\RepositoryInterface;
 
 class PostHandlerTest extends TestCase
 {

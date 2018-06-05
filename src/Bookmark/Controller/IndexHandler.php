@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bookmark\Handler;
+namespace Bookmark\Controller;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

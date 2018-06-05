@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BookmarkTest\UseCase;
 
-use Bookmark\UseCase\InmemRepository;
+use Bookmark\Driver\InmemRepository;
 use PHPUnit\Framework\TestCase;
 use Bookmark\UseCase\Service;
 use Bookmark\Entity\Bookmark;

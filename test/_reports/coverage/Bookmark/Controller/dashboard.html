@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /Users/eminetto/Documents/Projects/clean-architecture-php/src/Bookmark/UseCase</title>
+  <title>Dashboard for /Users/eminetto/Documents/Projects/clean-architecture-php/src/Bookmark/Controller</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@
       <ol class="breadcrumb">
         <li><a href="../../index.html">/Users/eminetto/Documents/Projects/clean-architecture-php/src</a></li>
         <li><a href="../index.html">Bookmark</a></li>
-        <li><a href="index.html">UseCase</a></li>
+        <li><a href="index.html">Controller</a></li>
         <li class="active">(Dashboard)</li>
 
       </ol>
@@ -159,7 +159,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,1], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,3], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -227,7 +227,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,6,"<a href=\"Service.php.html#7\">Bookmark\\UseCase\\Service<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"HandlerFactory.php.html#12\">Bookmark\\Controller\\HandlerFactory<\/a>"],[100,2,"<a href=\"IndexHandler.php.html#13\">Bookmark\\Controller\\IndexHandler<\/a>"],[100,2,"<a href=\"PostHandler.php.html#14\">Bookmark\\Controller\\PostHandler<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -251,7 +251,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,1,"<a href=\"Service.php.html#11\">Bookmark\\UseCase\\Service::__construct<\/a>"],[100,1,"<a href=\"Service.php.html#16\">Bookmark\\UseCase\\Service::search<\/a>"],[100,1,"<a href=\"Service.php.html#21\">Bookmark\\UseCase\\Service::findAll<\/a>"],[100,1,"<a href=\"Service.php.html#26\">Bookmark\\UseCase\\Service::store<\/a>"],[100,2,"<a href=\"Service.php.html#32\">Bookmark\\UseCase\\Service::delete<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"HandlerFactory.php.html#14\">Bookmark\\Controller\\HandlerFactory::__invoke<\/a>"],[100,1,"<a href=\"IndexHandler.php.html#17\">Bookmark\\Controller\\IndexHandler::__construct<\/a>"],[100,1,"<a href=\"IndexHandler.php.html#22\">Bookmark\\Controller\\IndexHandler::handle<\/a>"],[100,1,"<a href=\"PostHandler.php.html#18\">Bookmark\\Controller\\PostHandler::__construct<\/a>"],[100,1,"<a href=\"PostHandler.php.html#23\">Bookmark\\Controller\\PostHandler::handle<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

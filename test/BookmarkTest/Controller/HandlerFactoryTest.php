@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace BookmarkTest\Handler;
+namespace BookmarkTest\Controller;
 
-use Bookmark\Handler\IndexHandler;
-use Bookmark\Handler\HandlerFactory;
+use Bookmark\Controller\IndexHandler;
+use Bookmark\Controller\HandlerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Bookmark\UseCase\SqliteRepository;
-use Bookmark\UseCase\RepositoryInterface;
+use Bookmark\Driver\SqliteRepository;
+use Bookmark\Driver\RepositoryInterface;
 
 class HandlerFactoryTest extends TestCase
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace BookmarkTest\Handler;
+namespace BookmarkTest\Driver;
 
-use Bookmark\UseCase\SqliteRepository;
-use Bookmark\UseCase\SqliteRepositoryFactory;
-use Bookmark\UseCase\RepositoryInterface;
+use Bookmark\Driver\SqliteRepository;
+use Bookmark\Driver\SqliteRepositoryFactory;
+use Bookmark\Driver\RepositoryInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 

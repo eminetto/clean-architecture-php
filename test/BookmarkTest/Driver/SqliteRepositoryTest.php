@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BookmarkTest\UseCase;
+namespace BookmarkTest\Driver;
 
-use Bookmark\UseCase\SqliteRepository;
+use Bookmark\Driver\SqliteRepository;
 use PHPUnit\Framework\TestCase;
 use Bookmark\UseCase\Service;
 use Bookmark\Entity\Bookmark;
